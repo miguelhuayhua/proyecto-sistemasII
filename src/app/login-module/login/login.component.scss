@@ -1,5 +1,5 @@
-.sign-in-back{
-    background-color: #2f5867;
+.sign-in-back {
+  background-color: #434b3c;
 }
 
 
@@ -14,4 +14,40 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+
+
+
+//forget password text link
+.forget-password {
+  &:hover {
+    text-decoration: underline !important;
+    cursor: pointer !important;
+  }
+}
+
+//font size
+
+label,
+input {
+  font-size: .8em;
+  height: 30px;
+  border: none !important;
+
+}
+
+a {
+  font-size: .85em;
+}
+
+.input-check {
+  height: 20px;
+  width: 20px;
+  margin: 0 10px;
+}
+
+//btn submit
+.btn-submit {
+  height: 40px !important;
 }

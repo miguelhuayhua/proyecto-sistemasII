@@ -1,44 +1,67 @@
 <main class="container-fluid">
     <div class="row">
-        <form class="col-8 offset-2 my-5 shadow rounded overflow-hidden" action="" (submit)="onSubmit($event)">
+        <form class="col-6 offset-3 my-5 shadow rounded overflow-hidden" action="" (submit)="onSubmit($event)">
             <div class="row">
                 <div class="col-6 sign-in-back">
-                    <h4 class="text-center text-white my-5 mx-auto fw-bold ">
-                        Iniciar Sesión
-                    </h4>
+                    <h5 class="text-center text-white mt-5 mx-auto">
+                        Inicia Sesión si ya estás matriculado!
+                    </h5>
 
-                    <div class="form-group my-4 mx-auto">
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <label for="pass-input" name="ci"
-                                    class="input-group-text rounded-0 rounded-start bg-dark border-0 text-light">
-                                    C.I.:
+                    <div class="row">
+                        <div class="form-group my-4 mx-auto col-10 offset-1">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label for="pass-input" name="ci"
+                                        class="input-group-text rounded-0 rounded-start bg-dark border-0 text-light">
+                                        C.I.:
+                                    </label>
+                                </div>
+                                <input type="number" [(ngModel)]="ci" class="form-control" id="ci-input"
+                                    [ngModelOptions]="{standalone:true}" placeholder="Introduza su carnet de identidad">
+                            </div>
+                        </div>
+
+                        <div class="form-group my-4 mx-auto col-10 offset-1">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label for="pass-input"
+                                        class="input-group-text rounded-0 rounded-start bg-dark border-0 text-light">
+                                        Contraseña:
+                                    </label>
+                                </div>
+                                <input type="password" [(ngModel)]="this.password" [ngModelOptions]="{standalone:true}"
+                                    class="form-control" id="pass-input" placeholder="Introduza su contraseña">
+                            </div>
+                            <div class="form-check mt-3 d-flex ">
+                                <input class="form-check-input bg-dark input-check" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                                <label class="form-check-label text-light" for="flexCheckDefault">
+                                    Mantener sesión iniciada
                                 </label>
                             </div>
-                            <input type="number" [(ngModel)]="ci" class="form-control" id="ci-input"
-                                [ngModelOptions]="{standalone:true}" placeholder="Introduza su carnet de identidad">
                         </div>
+                        <a routerLink="/" class="text-center text-light text-decoration-none forget-password">Olvidé mi
+                            contraseña...</a>
+                        <input type="submit"
+                            class="btn d-block p-2 my-5 btn-dark rounded-pill fw-semibold mx-auto w-75 btn-submit"
+                            value="INICIAR SESIÓN">
                     </div>
-
-                    <div class="form-group my-4 mx-auto">
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <label for="pass-input"
-                                    class="input-group-text rounded-0 rounded-start bg-dark border-0 text-light">
-                                    Contraseña:
-                                </label>
-                            </div>
-                            <input type="password" [(ngModel)]="this.password" [ngModelOptions]="{standalone:true}"
-                                class="form-control" id="pass-input" placeholder="Introduza su contraseña">
-                        </div>
-                    </div>
-                    <input type="submit" class="btn d-block p-2 my-5 btn-dark rounded-pill fw-semibold mx-auto" value="INICIAR SESIÓN">
 
                 </div>
                 <div class="col-6">
-                    <h4 class="mt-3 text-center mx-auto">
-                        ¿Nuevo?, Regístrate!
-                    </h4>
+                    <h5 class="my-4 text-center mx-auto">
+                        ¿Nuevo?, Matriculate!
+                    </h5>
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            <img class="img-fluid" src="../../../assets/Loyola-logo-final.png" alt="logo colegio">
+                        </div>
+
+                        <div class="col-8 offset-2">
+                            <a class = "btn btn-outline-dark rounded-pill my-4 w-100"
+                            routerLink="/register">Comenzar con mi matriculación</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>

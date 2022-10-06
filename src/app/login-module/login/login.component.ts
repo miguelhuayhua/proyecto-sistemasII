@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  ci: number = 0;
+  ci: number | undefined = undefined;
   password: string = '';
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   //on submit event
   onSubmit(ev: SubmitEvent) {
-    console.log(this.ci)
+    this.router.navigateByUrl('/dashboard',{replaceUrl:true})
   }
   ngOnInit(): void {
   }
