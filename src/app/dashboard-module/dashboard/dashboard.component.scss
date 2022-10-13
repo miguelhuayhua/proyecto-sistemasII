@@ -1,3 +1,10 @@
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+
+
+
 main{
     background-color: #efefef;
 }
@@ -7,4 +14,24 @@ main{
     position: absolute;
     top: 0;
     left: 0;
+    width: 250px;
+    transform: translateX(0);
+    transition: transform 1s;
+}
+@include media-breakpoint-down(sm){
+    .navbar-left{
+        position: absolute;
+        transform: translateX(-75%);
+    }
+}
+
+
+//custom icon
+
+
+.custom-icon{
+    color: #efefef;
+    font-size: 3.5em;
+    width: 100%;
+    height: 100%;
 }

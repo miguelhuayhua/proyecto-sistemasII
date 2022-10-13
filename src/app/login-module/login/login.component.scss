@@ -1,3 +1,9 @@
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+
+
 .sign-in-back {
   background-color: #434b3c;
 }
@@ -51,3 +57,16 @@ a {
 .btn-submit {
   height: 40px !important;
 }
+
+
+@include media-breakpoint-up(sm){
+  h5{
+    font-size: 1.5em;
+  }
+  label, input{
+    font-size: .9em;
+
+  }
+}
+
+
