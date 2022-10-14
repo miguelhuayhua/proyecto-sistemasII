@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/service.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,14 +9,19 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   ci: number | undefined = undefined;
   password: string = '';
-  constructor(private router: Router) { }
+  constructor(private router: Router, private api : ApiService) { 
+
+  }
 
 
   //on submit event
   onSubmit(ev: SubmitEvent) {
     this.router.navigateByUrl('/dashboard',{replaceUrl:true})
+    this.api.postInfo(this.ci!)
   }
   ngOnInit(): void {
+    
   }
 
 }
+
