@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardModule } from './dashboard-module/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon'
+import { ApiService } from './service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { MatIconModule } from '@angular/material/icon'
     BrowserAnimationsModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent],
 
 })
