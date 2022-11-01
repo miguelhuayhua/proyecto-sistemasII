@@ -1,10 +1,66 @@
-main{
+main {
     background-color: #efefef;
 }
 
-.navbar-left{
-    background-color: #434A3B;
-    position: absolute;
+.icon-title {
+    padding-bottom: 10px;
+
+    h2 {
+
+        color: #A20102;
+        font-variant: small-caps;
+        font-size: 1.3em;
+    }
+
+    img {
+        width: 60px;
+    }
+}
+
+.navbar-left {
+    background-color: #FEFEFE;
+    overflow-y: scroll;
+    height: 100vh;
+    position: sticky;
     top: 0;
-    left: 0;
+}
+
+.navbar-item {
+    font-family: monospace;
+    font-size: 1.2em;
+    margin: 10px 0;
+    transition: background-color .5s, color .5s;
+    display: flex;
+    align-items: center;
+    color: #3A5486;
+
+    mat-icon {
+        margin-right: 10px;
+        width: 40px;
+    }
+
+    &:hover {
+        color: red;
+        cursor: pointer;
+        background-color: #ececec;
+        border-radius: 10px;
+        transition: background-color .5s, color .5s;
+    }
+}
+
+//dash body (col-10)
+
+//dash top info
+.dash-top {
+    background: rgb(162, 1, 2);
+    background: -moz-linear-gradient(97deg, rgba(162, 1, 2, 1) 1%, rgba(110, 43, 68, 1) 100%);
+    background: -webkit-linear-gradient(97deg, rgba(162, 1, 2, 1) 1%, rgba(110, 43, 68, 1) 100%);
+    background: linear-gradient(97deg, rgba(162, 1, 2, 1) 1%, rgba(110, 43, 68, 1) 100%);
+}
+
+
+//graphics
+.linear-graphic{
+    background-color: #0b2658;
+    height: 200px;
 }
