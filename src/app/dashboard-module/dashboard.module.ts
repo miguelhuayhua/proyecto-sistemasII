@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatIconModule } from '@angular/material/icon';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 
 @NgModule({
@@ -9,7 +10,9 @@ import { MatIconModule } from '@angular/material/icon';
     DashboardComponent
   ],
   imports: [
-    CommonModule, MatIconModule
+    CommonModule,
+    MatIconModule,
+    GoogleChartsModule
   ],
   exports: [DashboardComponent]
 })

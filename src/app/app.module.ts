@@ -7,7 +7,7 @@ import { LoginModule } from './login-module/login-module.module';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardModule } from './dashboard-module/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,7 @@ import { MatIconModule } from '@angular/material/icon'
     DashboardModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
